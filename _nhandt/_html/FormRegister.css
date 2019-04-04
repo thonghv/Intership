@@ -1,0 +1,21 @@
+		table{
+			border: 0px solid gray;
+			width: 600px;
+			height: 200px;
+			border-collapse: collapse;
+			margin-top: 30px;
+		}
+		th{
+			background-color: #73ad21;
+			color: white;
+			font-size: 35px;
+			height: 80px;
+		}
+		td{
+			padding: 20px 15px;
+			font-weight: bold;
+			font-size: 18px;
+		}
+		tr{
+			background-color: #f0f0f0;
+		}

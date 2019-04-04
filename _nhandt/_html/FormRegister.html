@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FormRegister</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="FormRegister.css">
+</head>
+<body>
+	<form action="#">
+		<table align="center">
+			<tr>
+				<th colspan="2">REGISTER</th>
+			</tr>
+			<tr>
+				<td>User Name</td>
+				<td>
+					<input type="text" name="name" placeholder="Include characters, numbers or '_'" size=40 required onmouseenter="this.style.backgroundColor='#f0fff0'" onmouseleave="this.style.backgroundColor='white'">
+				</td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td>
+					<input type="text" name="pass" placeholder="Include characters, numbers or other letters" size="40" required onmouseenter="this.style.backgroundColor='#f0fff0'" onmouseleave="this.style.backgroundColor='white'">
+				</td>
+			</tr>
+			<tr>
+				<td>Retype Password</td>
+				<td><input type="text" name="Retype" placeholder="Include characters, numbers or other letters" size="40" required onmouseenter="this.style.backgroundColor='#f0fff0'" onmouseleave="this.style.backgroundColor='white'"></td>
+			</tr>
+			<tr>
+				<td>Phone numbers</td>
+				<td><input type="number" name="Phone" placeholder="Only numbers" size="40" required onmouseenter="this.style.backgroundColor='#f0fff0'" onmouseleave="this.style.backgroundColor='white'"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="reset">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" value="ok">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
