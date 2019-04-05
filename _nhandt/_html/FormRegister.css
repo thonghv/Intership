@@ -30,4 +30,9 @@
 		}
 		input{
 			padding: 3px;
+			border: 1px solid #00bcd4;
+			border-left: none;
+			border-right: none;
+			border-top: none;
+			background-color: #f0f0f0;
 		}
