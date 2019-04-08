@@ -15,7 +15,7 @@
 			<tr>
 				<td>User Name</td>
 				<td>
-					<input type="text" id="name" placeholder="Include characters, numbers or '_'" size=40 required onmouseenter="this.style.backgroundColor='white'" onmouseleave="this.style.backgroundColor='#f0f0f0'">
+					<input type="text" id="name" placeholder="Include characters, numbers or '_'" size=40 required onmouseenter="this.style.backgroundColor='white'" onmouseleave="this.style.backgroundColor='#f0f0f0'" pattern="[0-9A-Za-z]{5,10}" title="không được chứa các giá trị đặc biệt">
 				</td>
 			</tr>
 			<tr>
@@ -27,6 +27,10 @@
 			<tr>
 				<td>Retype Password</td>
 				<td><input type="text" id="Retype" placeholder="Include characters, numbers or other letters" size="40" required onmouseenter="this.style.backgroundColor='white'" onmouseleave="this.style.backgroundColor='#f0f0f0'"></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="email" id="email" placeholder="your email" size="40" required onmouseenter="this.style.backgroundColor='white'" onmouseleave="this.style.backgroundColor='#f0f0f0'"></td>
 			</tr>
 			<tr>
 				<td>Phone numbers</td>
