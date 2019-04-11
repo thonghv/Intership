@@ -4,9 +4,10 @@
 	<title>FormRegister</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="FormRegister.css">
+	<script src="FormRegister.js"></script>
 </head>
 <body>
-	<form action="#">
+	<form action="#" method="post">
 		<table align="center">
 			<tr>
 				<th colspan="2">REGISTER</th>
@@ -14,27 +15,30 @@
 			<tr>
 				<td>User Name</td>
 				<td>
-					<input type="text" name="name" placeholder="Include characters, numbers or '_'" size=40 required onmouseenter="this.style.backgroundColor='#f0fff0'" onmouseleave="this.style.backgroundColor='white'">
+					<input type="text" id="name" placeholder="your name" pattern="[0-9A-Za-z]{5,10}" title="không được chứa các giá trị đặc biệt">
 				</td>
 			</tr>
 			<tr>
 				<td>Password</td>
 				<td>
-					<input type="text" name="pass" placeholder="Include characters, numbers or other letters" size="40" required onmouseenter="this.style.backgroundColor='#f0fff0'" onmouseleave="this.style.backgroundColor='white'">
+					<input type="text" id="pass" placeholder="your password">
 				</td>
 			</tr>
 			<tr>
 				<td>Retype Password</td>
-				<td><input type="text" name="Retype" placeholder="Include characters, numbers or other letters" size="40" required onmouseenter="this.style.backgroundColor='#f0fff0'" onmouseleave="this.style.backgroundColor='white'"></td>
+				<td><input type="text" id="Retype" placeholder="retype password"></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" id="email" placeholder="your email"></td>
 			</tr>
 			<tr>
 				<td>Phone numbers</td>
-				<td><input type="number" name="Phone" placeholder="Only numbers" size="40" required onmouseenter="this.style.backgroundColor='#f0fff0'" onmouseleave="this.style.backgroundColor='white'"></td>
+				<td><input type="number" id="Phone" placeholder="Only numbers"></td>
 			</tr>
 			<tr>
-				<td colspan="2" align="center">
-					<input type="submit" value="reset">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="submit" value="ok">
+				<td colspan="2">
+					<input type="submit" value="Sign in" onclick="KiemTra()">
 				</td>
 			</tr>
 		</table>
