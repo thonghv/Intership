@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FormRegister</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="FormRegister.css">
+	<script src="FormRegister.js"></script>
+</head>
+<body>
+	<form action="#" method="post">
+		<table align="center">
+			<tr>
+				<th colspan="2">REGISTER</th>
+			</tr>
+			<tr>
+				<td>User Name</td>
+				<td>
+					<input type="text" id="name" placeholder="your name" size=40 onmouseenter="this.style.backgroundColor='white'" onmouseleave="this.style.backgroundColor='#f0f0f0'" pattern="[0-9A-Za-z]{5,10}" title="không được chứa các giá trị đặc biệt">
+					<h6 id='error' style="display: none">Ban phai nhap username </h6>
+				</td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td>
+					<input type="text" id="pass" placeholder="your password" size="40" onmouseenter="this.style.backgroundColor='white'" onmouseleave="this.style.backgroundColor='#f0f0f0'">
+				</td>
+			</tr>
+			<tr>
+				<td>Retype Password</td>
+				<td><input type="text" id="Retype" placeholder="your password" size="40" onmouseenter="this.style.backgroundColor='white'" onmouseleave="this.style.backgroundColor='#f0f0f0'"></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input id="email" placeholder="your email" size="40" onmouseenter="this.style.backgroundColor='white'" onmouseleave="this.style.backgroundColor='#f0f0f0'"></td>
+			</tr>
+			<tr>
+				<td>Phone numbers</td>
+				<td><input type="number" id="Phone" placeholder="Only numbers" size="40" onmouseenter="this.style.backgroundColor='white'" onmouseleave="this.style.backgroundColor='#f0f0f0'"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="Sign in" onclick="KiemTra()">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
