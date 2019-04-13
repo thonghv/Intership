@@ -1,0 +1,26 @@
+h1 {
+	color: red;background-color:yellow;font-size: 80px;
+	 text-align: center;
+}
+h4{
+color: green;
+font-size: 20px;
+ text-align: center;
+}
+body {
+text-align: center;
+}
+div{
+	background:black;
+	color:white;
+	text-align:center;
+}
+.btn {
+    width: 98.6%;
+    border: none;
+    margin-top: 5px;
+    color: white;
+    background-color: #3b5998;
+    border-radius: 5px;
+    padding: 12px;
+  }
