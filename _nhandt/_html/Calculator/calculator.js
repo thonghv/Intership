@@ -36,4 +36,5 @@ function squared() {
 // xuất kết quả 
 function result() {
 	a('result').value = eval(a('result').value);
+	x = a('result').value;
 }
