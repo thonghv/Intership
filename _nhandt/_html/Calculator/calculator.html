@@ -29,12 +29,14 @@
 				<td><input type="button" class="number" value="2" onclick="setNum(this.value)"></td>
 				<td><input type="button" class="number" value="3" onclick="setNum(this.value)"></td>
 				<td><input type="button" class="btn" value="+" onclick="setNum(this.value)"></td>
-				<td rowspan="2"><input type="button" class="btn" id="equ" value="=" onclick="result()"></td>
+				<td><input type="button" class="btn" value="." onclick="setNum(this.value)"></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="button" class="number" id="oh" value="0" onclick="setNum(this.value)"></td>
-				<td><input type="button" class="btn" value="." onclick="setNum(this.value)"></td>
+				<td><input type="button" class="number" id="oh" value="0" onclick="setNum(this.value)"></td>
+				<td><input type="button" class="btn" value="x&sup2" onclick="squared()"></td>
+				<td><input type="button" class="btn" value="%" onclick="setNum(this.value)"></td>
 				<td><input type="button" class="btn" value="-" onclick="setNum(this.value)"></td>
+				<td><input type="button" class="btn" id="equ" value="=" onclick="result()"></td>
 			</tr>
 		</table>
 	</body>

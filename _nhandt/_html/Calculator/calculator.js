@@ -26,6 +26,13 @@ function clear() {
 	a('result').value = x;
 }
 
+// tính bình phương
+function squared() {
+	y = a('result').value;
+	a('result').value = Math.pow(y,2);
+	x = a('result').value;
+}
+
 // xuất kết quả 
 function result() {
 	a('result').value = eval(a('result').value);
