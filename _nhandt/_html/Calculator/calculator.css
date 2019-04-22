@@ -30,12 +30,7 @@ table{
 	height: 100px;
 	font-size: 50px;
 }
-#equ{
-	height: 50px;
-}
-#oh{
-	width: 100px;
-}
+
 input{
 	border: 1px solid #00bdc4;
 	border-radius: 15px;

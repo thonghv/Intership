@@ -1,40 +1,40 @@
 var x = '';
 var y;
 
-function a(value) {
+function cal(value) {
 	return document.getElementById(value);
 }
 
 // nhập ký tự
 function setNum(number) {
 	x += number;
-	a('result').value = x;
+	cal('result').value = x;
 }
 
 
 // chức năng xóa thành phần vừa nhập vào
 function pre() {
-	y = a('result').value.length-1
-	a('result').value = a('result').value.substr(0,y);
-	x = a('result').value.substr(0,y);
+	y = cal('result').value.length-1
+	cal('result').value = cal('result').value.substr(0,y);
+	x = cal('result').value.substr(0,y);
 }
 
 
 // chức năng xóa màn hình
-function clear() {
-	x = '';
-	a('result').value = x;
+function clean() {
+	x = "";
+	cal('result').value = x;
 }
 
 // tính bình phương
 function squared() {
-	y = a('result').value;
-	a('result').value = Math.pow(y,2);
-	x = a('result').value;
+	y = cal('result').value;
+	cal('result').value = Math.pow(y,2);
+	x = cal('result').value;
 }
 
 // xuất kết quả 
 function result() {
-	a('result').value = eval(a('result').value);
-	x = a('result').value;
+	cal('result').value = eval(cal('result').value);
+	x = cal('result').value;
 }
