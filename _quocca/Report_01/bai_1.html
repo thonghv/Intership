@@ -8,9 +8,9 @@
 
  <h1>Giải phương trình bậc 2: Ax<sup>2</sup> + Bx + C</h1>
  <form method="post">
-  <p><h2>A=<input type="text" name="a" value=""> <small><i id="text" style="color:red"></small></i></h2>
-  <h2>B=<input type="text" name="b" value=""></h2>
-  <h2>C=<input type="text" name="c" value=""></h2>
+  <p><h2>A=<input type="text" name="a" value=""> <small><i id="text1" style="color:red"></small></i></h2>
+  <h2>B=<input type="text" name="b" value=""> <small><i id="text2" style="color:red"></small></i></h2>
+  <h2>C=<input type="text" name="c" value=""> <small><i id="text3" style="color:red"></small></i></h2>
   <input type="button" value="Giải phương trình" onClick="giai(this.form)">
  </p>
  </form>
@@ -19,7 +19,7 @@
 	<p>Delta=<b id="delta"></b></p>
 	<p id="sn"><br></p>
 	x<sub>1</sub>= <b id="x1"></b><br>
-	x<sub>2</sub>= <b id="x2"></b>
+	x<sub>2</sub>=  <b id="x2"></b>
  </p>
  <script language="JavaScript">
 	function giai(form)
@@ -30,9 +30,21 @@
 	x= parseInt(form.a.value);
 	y= parseInt(form.b.value);
 	z= parseInt(form.c.value);
-	if(x ==0)
+	if(form.a.value ==="")
 	{
-		document.getElementById("text").innerHTML = "A phải khác 0!";
+		document.getElementById("text1").innerHTML = "Nhập giá trị A";
+	}
+	else if(form.b.value ==="")
+	{
+		document.getElementById("text2").innerHTML = "Nhập giá trị B";
+	}
+	else if(form.c.value ==="")
+	{
+		document.getElementById("text3").innerHTML = "Nhập giá trị C";
+	}
+	else if(x ==0)
+	{
+		document.getElementById("text1").innerHTML = "A phải khác 0!";
 	}
 	else
 	{
