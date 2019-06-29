@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="content-type" content="text/html"/>
+    <title>bài tập số 4</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+    
+        div{
+            margin-top: -200px;
+        }
+       h3{
+            margin-top:  -200px;
+        }
+    </style>
+    <!-- <script type="text/javascript">   
+    function timkiem(){
+      
+        var danhsach=["&nbsp;", "hello","hi","good"] ;
+        var giatritim=document.getElementById("giatritim").value; 
+        var vitri=danhsach.indexOf(giatritim.toLowerCase(),0);
+        if(vitri == -1)
+        {
+            danhsach.splice(1,0,giatritim);
+             document.write(danhsach);
+        }
+        else{
+        
+            alert("đã tìm thấy "+ giatritim + " tại mục số : "+ vitri);
+            confirm("bạn có muốn xóa mục này không ?");
+            if(confirm("ban có muốn xóa mục này không?"==true)){
+                danhsach.splice(vitri,1);
+                document.write(danhsach);
+            }
+            else
+                 return danhsach;
+                }
+            
+        
+    }
+        
+     </script> -->
+</head>
+<body>
+    <table border="1" cellspacing="30">
+       <tr >
+          <td  width="400"><h3>Nhập một từ tiếng anh vào</h3>
+            <input type="text" name="giatritim" id="giatritim" />
+            <input type="button" name="kiểmtra" id="kiểmtra" value="kiểm tra" onclick="timkiem()"/>
+        </td>
+          <td   width="400" height="500" >  
+                <div>
+                            <script type="text/javascript">
+                                var danhsach=["&nbsp;","hello","hi","good"];
+                                for (const tu of danhsach) {
+                                    document.write("&nbsp;"+tu+ "<br/>");    
+                                }
+                                function timkiem(){
+                                     var danhsach=["","hello","hi","good"];
+                                    var giatritim=document.getElementById("giatritim").value;
+                                    var vitri=danhsach.indexOf(giatritim.toLowerCase(),0);
+                                    if(vitri== -1){
+                                        danhsach.splice(1,0,giatritim);
+                                        // vong lap de  lay sach dach sau khi them vao
+                                        for (const tu of danhsach) {
+                                           document.write("&nbsp;"+tu+"<br/>") ;
+                                        }
+                                    }
+                                         else{
+                                          alert("đã tìm thấy từ " + giatritim + " tại mục số:" +vitri);
+                                          confirm("bạn có muốn xóa mục này không ?");
+                                            if(confirm("bạn có muốn xóa mục này không ?")==true)
+                                              {
+                                              danhsach.splice(vitri,1);
+                                              for (const tu of danhsach) {
+                                                  document.write("&nbsp;"+tu+"<br/>");
+                                              }
+                                              }    
+                                         }  
+                                         
+                                    
+                                }
+                            </script>
+              </div>  
+          </td>
+       </tr>
+      
+    </table>
+    </body>
+    </html>
+    
