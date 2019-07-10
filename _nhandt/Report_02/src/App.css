@@ -1,0 +1,25 @@
+td {
+    border: solid 1px gray;   
+}
+
+th {
+    text-align: center;
+}
+
+.inputfile {
+	opacity: 0;	
+}
+
+.inputfile + label{
+    font-size: 2em;
+    color: white;
+    background-color: #696969;
+    cursor: pointer;
+    
+    border-radius: 20px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #528B8B;
+}
