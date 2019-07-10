@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {MDBContainer } from "mdbreact";
 import { BrowserRouter as Router,Route } from 'react-router-dom';
-import "./index.css";
 import Nav from './component/Nav'
 import HeaderHome from "./component/HeaderHome";
 import DetailInformation from "./component/DetailInformation";
@@ -11,6 +10,8 @@ import EditForm from "./component/EditForm";
 import DeleteForm from "./component/DeleteForm";
 import Notification from "./component/Notification";
 import Data from './Data.json'
+
+
 
 class App extends Component {
   constructor(props){
@@ -143,7 +144,7 @@ class App extends Component {
     return (
       <Router>
         {this.displayNotification()}
-        <MDBContainer className="cn" style={{textAlign: 'center'}}>
+        <MDBContainer className="cn" style={{textAlign: 'center'}} responsive>
           {
             this.displayFormEdit()
           }

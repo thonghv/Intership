@@ -3,9 +3,9 @@ import "../index.css";
 const HeaderHome = () => {
     return (
       <figure className="figure" >
-        <h2>Trang quản lý học sinh</h2>
+        <h2>Student Management System</h2>
         <figcaption className="figure-caption">
-          Danh sách học sinh
+          List Student
         </figcaption>
       </figure>
     );

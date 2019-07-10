@@ -22,11 +22,6 @@ class RowStudent extends Component {
                 <td>
                 < MDBBtnGroup size="sm">
                         <MDBBtn color="warning" onClick={() => this.clickEdit()}>Edit</MDBBtn>
-                        {/* <EditForm 
-                        statusEditForm={this.props.statusEditForm}
-                        changeStatusEditForm={(status) => this.props.changeStatusEditForm(status)}
-                        studentFromTable={this.props.studentFromTable}
-                        ></EditForm> */}
                         <MDBBtn color="danger" onClick={() => this.clickDelete()}>Delete</MDBBtn>
                         <Link to={"/detail." + this.props.id}><MDBBtn color="info">View</MDBBtn></Link>
                     </MDBBtnGroup>
