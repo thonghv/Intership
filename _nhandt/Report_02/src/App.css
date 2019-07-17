@@ -23,3 +23,17 @@ th {
 .inputfile + label:hover {
     background-color: #528B8B;
 }
+
+#drop {
+	border:solid 1px green;
+	color: #696969;
+	width: 500px;
+	height: 400px;
+	padding-left: 170px;
+	margin-top: 50px;
+	border-radius: 20px;
+}
+
+#drop:hover {
+	border: solid 1px blue;
+}

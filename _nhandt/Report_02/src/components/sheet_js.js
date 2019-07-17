@@ -1,58 +1,37 @@
 import React, { Component } from 'react';
-import * as XLSX from 'xlsx';
-import Table from './table';
-import { Redirect } from 'react-router-dom';
+import Dropzone from 'react-dropzone'
 
 class Sheet extends Component {
 
-    constructor(props){
-        super(props);
-        this.state = {
-            value : ''
-        }
-    }
-
-    renderFile = (event) => {
-        var filePath = document.getElementById('file').value;
-        var allowedExtensions = /(\.xlsx)$/i;
-        if(!allowedExtensions.exec(filePath)){
-            alert('Open file Excel only');
-            return false;
-        }else{
-            var {value} = this.state;
-            const scope = this
-            var files = event.target.files, f = files[0];
-            var reader = new FileReader();
-            reader.onload = function(event) {
-                var data = new Uint8Array(event.target.result);
-                var workbook = XLSX.read(data, {type: 'array'});
-                var first_sheet_name = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[first_sheet_name];
-                value = XLSX.utils.sheet_to_json(worksheet)
-                scope.setState({
-                    value : value
-                })
-            };
-            reader.readAsArrayBuffer(f);
-        }
-    }
+    handleOnDrop = (files) => {
+        this.props.formatData() 
+        this.props.renderDragFile(files[0])
+    }    
 
     render() {
-
-        var { value } = this.state
-
-        if(value.length){
-            return <Table value={ value }/>
-        }
-
         return (
             <div className='container'>
-                <input type="file" id='file' className='inputfile' onChange={this.renderFile } />      
+                <input type="file" id='file' className='inputfile' onChange={ this.renderFile } />      
                 
-                <label htmlFor="file">&nbsp; Choose a file &nbsp;</label>                           
+                <label htmlFor="file">&nbsp; Choose a file &nbsp;</label>   
+
+                <Dropzone onDrop={ this.handleOnDrop }>{({getRootProps}) => 
+                                                                              (<div {...getRootProps()}  id='drop'  >
+                                                                                
+                                                                                   <h3> Drag files here</h3>
+                                                                              </div>
+                                                        )}
+                </Dropzone>
             </div>
         );
     }
+
+    renderFile = (event) => {
+        event.preventDefault()
+        this.props.renderFile(event)
+        this.props.formatData()
+    }
+
 }
 
 export default Sheet;

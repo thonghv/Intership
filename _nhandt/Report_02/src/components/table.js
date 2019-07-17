@@ -1,45 +1,18 @@
 import React, { Component } from 'react';
 import TableInfor from './TableInfor'
-import Sheet from './sheet_js'
-import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux'
 
 class Table extends Component {
     render() {
 
-        var { value } = this.props;
-        var index = 1;
+        var  value  = this.props.value.datas;
 
         if(value.length){
-            for(var i=0; i<value.length; i++){
-                if(typeof(value[i].ID) !== 'number'){
-                    index = -1;
-                    alert('Bạn chưa nhập đầy đủ dữ liệu cột ID !')
-                    return <Sheet />
-                }
-                if(typeof(value[i]['Full Name']) !== 'string'){
-                    index = -1;
-                    alert('Bạn chưa nhập đầy đủ dữ liệu cột Full Name !')
-                    return <Sheet />
-                }
-                if(typeof(value[i]['TMA Account']) !== 'string'){
-                    index = -1;
-                    alert('Bạn chưa nhập đầy đủ dữ liệu cột TMA Account !')
-                    return <Sheet />
-                }
-                if(typeof(value[i].Phone) !== 'string'){
-                    index = -1;
-                    alert('Bạn chưa nhập đầy đủ dữ liệu cột Phone !')
-                    return <Sheet />
-                }                
-            }
-            if(index>0){
-                var result = value.map((data, index) => {
-                    return <TableInfor key={ index } value={ data } />
-                })
-                
-            }
+            var result = value.map((data, index) => {
+                return <TableInfor key={ index } value={ data } />
+            })
         }
-
+        
         return (
             <div className='container'>   
                 <table className="table table-hover">
@@ -63,4 +36,10 @@ class Table extends Component {
     }
 }
 
-export default Table;
+const mapStateToProps = (state) => {
+    return {
+        value : state
+    }
+}
+
+export default connect(mapStateToProps, null)(Table);

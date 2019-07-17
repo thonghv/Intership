@@ -6,11 +6,6 @@ const menus = [
 		name : 'Home page',
 		to : '/',
 		exact : true
-	},
-	{
-		name : 'Table page',
-		to : '/table',
-		exact : false
 	}
 ];
 

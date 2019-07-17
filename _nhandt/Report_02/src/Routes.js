@@ -1,12 +1,12 @@
 import React from 'react';
-import Sheet from './components/sheet_js';
+import SheetContainer from './containers/sheetContainer';
 import Table from './components/table';
 
 const routes = [
 	{
 		path : '/',
 		exact : true,
-		main : () => <Sheet />
+		main : () => <SheetContainer />
 	},
 	{
 		path : '/table',
