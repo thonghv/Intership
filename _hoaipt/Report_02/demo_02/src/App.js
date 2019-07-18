@@ -1,4 +1,3 @@
-
 import BasicTable from "./basictable";
 import data from './components/data.json';
 import React, { Component } from 'react';
@@ -9,7 +8,7 @@ class App extends Component {
         super(props)
         this.state = {
             data: data,
-            detail: null,
+            // detail: null,
             dataView: {}
         }
     }
@@ -19,11 +18,11 @@ class App extends Component {
         data[id]  = value;
         if(value){
             this.setState({
-                data
+                data // data : data
             })
         }
     }
-
+      
     showView = (item) => {
         this.setState({
             dataView: item
@@ -34,14 +33,17 @@ class App extends Component {
         var { data } = this.state
 
         return (           
-            <Router>
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <Router>
                 <Route path='/' exact component={() => <BasicTable editproduct={this.editproduct}
                  detail={this.state.dataView} data={data}
                  showView={(item) => this.showView(item)} />} />
                 <Route path='/view' component={() => <View detail={this.state.dataView} />} />
             </Router>
+            </div>
         );
     }
 }
 
 export default App;
+

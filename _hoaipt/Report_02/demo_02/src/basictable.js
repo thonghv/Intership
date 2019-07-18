@@ -39,15 +39,14 @@ class BasicTable extends Component {
                 key={index}
                 index={index}
                 data={value}
-                showView={(item) => this.props.showView(value)}
+                showView={() => this.props.showView(value)}
                 delete={(id) =>  this.deleteproduct(id) }
                 edit={(id, giatri) =>  this.editproduct(id, giatri) }
                 detail={this.props.detail}
                 Add={(giatri)=>this.addproduct(giatri)}
             />
         });
-        return (
-            
+        return (   
             <div>
                 <ModalPage add={(data) => this.add(data)} />
                 <MDBTable>

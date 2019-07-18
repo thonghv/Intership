@@ -146,10 +146,9 @@ class Rowdata extends Component {
                         </MDBModalFooter>
                     </MDBModal>
                 </td>
-
             </tr>
         );
-    }
+    } 
 }
 
 export default Rowdata;

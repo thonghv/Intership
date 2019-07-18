@@ -50,7 +50,7 @@ render() {
             <form className="mx-3 grey-text">
             <label htmlFor="formGroupExampleInput">ID</label>
                                 <input
-                                    type="text"
+                                    type="number"
                                     className="form-control"
                                     id="formGroupExampleInput"
                                     onChange={(event) => this.onChange(event) }
@@ -82,7 +82,7 @@ render() {
                                 />
                                 <label htmlFor="formGroupExampleInput">Phone</label>
                                 <input
-                                    type="text"
+                                    type="number"
                                     className="form-control"
                                     id="formGroupExampleInput"
                                     onChange={(event) => this.onChange(event) }
@@ -90,7 +90,7 @@ render() {
                                 />
                                 <label htmlFor="formGroupExampleInput">Email</label>
                                 <input
-                                    type="text"
+                                    type="email"
                                     className="form-control"
                                     id="formGroupExampleInput"
                                     onChange={(event) => this.onChange(event) }
